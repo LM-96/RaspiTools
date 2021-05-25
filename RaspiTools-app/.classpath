@@ -28,12 +28,27 @@
 	</classpathentry>
 	<classpathentry kind="output" path="bin/default"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11/"/>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.spf4j/spf4j-core/8.9.0/4b964f673393a54960554a49beeb6ad6519a6781/spf4j-core-8.9.0-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.spf4j/spf4j-core/8.9.0/2121538d38da0d1183198526d8a5f74258ba3471/spf4j-core-8.9.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/30.0-jre/44b1d40ac2743daef983d85b81f4534bc6a17d04/guava-30.0-jre-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/30.0-jre/8ddbc8769f73309fe09b54c5951163f10b0d89fa/guava-30.0-jre.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.pi4j/pi4j-core/1.4/435f5b6472f2da1e337e8ea856142069e73363d8/pi4j-core-1.4-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.pi4j/pi4j-core/1.4/ed6e8ae3cee077a7faef989352dbbaacd59849a0/pi4j-core-1.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.spf4j.avro/core-schema/1.0.3/401718e300f171ada9d9f8bf9690900645723e3a/core-schema-1.0.3-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.spf4j.avro/core-schema/1.0.3/6effd5d5211814d7dc880551f06a425a135543a1/core-schema-1.0.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.apache.avro/avro/1.10.2/2db10decc8533bb4673f99f43d2402914f5d1ba8/avro-1.10.2-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.apache.avro/avro/1.10.2/a65aaa91c1aeceb3dd4859dbb9765d1c2063f5a2/avro-1.10.2.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -69,6 +84,41 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/e47264d065cecbc572ba99856fcc7da19a470ae3/jaxb-api-2.3.1-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/8531ad5ac454cc2deb9d4d32c40c4d7451939b5d/jaxb-api-2.3.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.2/7a80d185a44cb2380929ac880bb1a59ed58d2e80/jackson-annotations-2.12.2-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.2/a770cc4c0a1fb0bfd8a150a6a0004e42bc99fca/jackson-annotations-2.12.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.2/ef9d09d9a257275ecce4e5b4c26c1223007e14c5/jackson-databind-2.12.2-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.2/5f9d79e09ebf5d54a46e9f4543924cf7ae7654e0/jackson-databind-2.12.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.2/882b7c5f3b71f22f181e0b4c88d5a1f818de04a6/jackson-core-2.12.2-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.2/8df50138521d05561a308ec2799cc8dda20c06df/jackson-core-2.12.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/71a1fdefa224da50f1db6306ce609981e20186c9/slf4j-api-1.7.30-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/findbugs-annotations/3.0.1/72e2503a4a881efe13229375613800613f85eaee/findbugs-annotations-3.0.1-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/findbugs-annotations/3.0.1/bf2342edabc0fc37fc0b1de0b03f071bef935c3/findbugs-annotations-3.0.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/109c5be93362e6e651e417c51d1863477a22969c/trove4j-3.0.3-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/42ccaf4761f0dfdfa805c9e340d99a755907e2dd/trove4j-3.0.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.20/8388cb084d8934ee9a66a2f613f0ee5a98abfad7/commons-compress-1.20-sources.jar" kind="lib" path="C:/Users/Luca/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.20/b8df472b31e1f17c232d2ad78ceb1c84e00c641b/commons-compress-1.20.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>

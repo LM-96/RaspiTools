@@ -14,6 +14,9 @@ public interface ConfigReader {
 	public final static int DEFAULT_DELAY_MILLIS = 500;
 	public final static int DEFAULT_CRITICAL_DISTANCE = 10;
 	
+	public static final String DEFAULT_LED_ALONE = "./LedAlone";
+	public static final String DEFAULT_SONAR_ALONE = "./SonarAlone";
+	
 	public boolean load() throws IOException;
 	
 	public default Pin getLedPin() {
@@ -34,6 +37,14 @@ public interface ConfigReader {
 	
 	public default long getDelayMillis() {
 		return DEFAULT_DELAY_MILLIS;
+	}
+	
+	public default String getLedAlone() {
+		return DEFAULT_LED_ALONE;
+	}
+	
+	public default String getSonarAlone() {
+		return DEFAULT_SONAR_ALONE;
 	}
 
 }

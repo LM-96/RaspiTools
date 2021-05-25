@@ -16,7 +16,6 @@ repositories {
     // Use Maven Central for resolving dependencies.
 	mavenCentral()
     jcenter()
-    mavenCentral()
 }
 
 dependencies {
@@ -29,6 +28,16 @@ dependencies {
     // https://mvnrepository.com/artifact/com.pi4j/pi4j-core
 	implementation group: 'com.pi4j', name: 'pi4j-core', version: '1.4'
 	
+	// https://mvnrepository.com/artifact/org.spf4j/spf4j-core
+	implementation group: 'org.spf4j', name: 'spf4j-core', version: '8.9.0'
+	
+	// https://mvnrepository.com/artifact/org.apache.avro/avro
+	implementation group: 'org.apache.avro', name: 'avro', version: '1.10.2'
+	
+	
+
+	
+	
     
 }
 
@@ -36,3 +45,8 @@ application {
     // Define the main class for the application.
     mainClass = 'it.lm96.raspitools.App'
 }
+
+applicationDistribution.from("src/main/resources") {
+    into "bin"
+}
+

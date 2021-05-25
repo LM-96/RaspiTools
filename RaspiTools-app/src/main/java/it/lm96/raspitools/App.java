@@ -5,8 +5,8 @@ package it.lm96.raspitools;
 
 import java.io.IOException;
 
-import com.pi4j.io.gpio.GpioController;
-import com.pi4j.io.gpio.GpioFactory;
+/*import com.pi4j.io.gpio.GpioController;
+import com.pi4j.io.gpio.GpioFactory;*/
 
 import it.lm96.raspitools.config.ConfigReader;
 import it.lm96.raspitools.config.FileConfigReader;
@@ -15,28 +15,38 @@ import it.lm96.raspitools.sonar.PiSonar;
 
 public class App {
 	
-	private final static GpioController CONTROLLER = GpioFactory.getInstance();
+	//private final static GpioController CONTROLLER = GpioFactory.getInstance();
+	private final static String appName = "RaspiTools";
 	
     public static void main(String[] args) throws InterruptedException, IOException {
     	
     	ConfigReader config = FileConfigReader.newFileConfigReader("config.ini");
     	if(!config.load()) {
-    		System.out.println("No configuration file found. Will be used default configuration.");
+    		System.out.println(appName + " | No configuration file found. Will be used default configuration.");
     	} else {
-    		System.out.println("Configuration file opened");
+    		System.out.println(appName + " | Configuration file opened");
     	}
     	
-       PiLed led = PiLed.getLed(CONTROLLER, config.getLedPin());
-       if(led.isOn())
-    	   led.powerOff();
+       PiLed led = PiLed.getLedAlone(config.getLedAlone(), config.getLedPin().getAddress());
+       Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+		@Override
+		public void run() {
+			System.out.println(appName + " | Exit");
+			try {
+				led.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}		
+		}
+       }));
        
-       PiSonar sonar = PiSonar.getSonar(CONTROLLER, config.getTriggerPin(), config.getEchoPin());
+       PiSonar sonar = PiSonar.getSonarAlone(config.getSonarAlone(), config.getTriggerPin().getAddress(), config.getEchoPin().getAddress());
        double distance = 0, criticalDistance = config.getCriticalDistance();
        long delay = config.getDelayMillis();
        
        while(true) {
     	   distance = sonar.readDistanceInCm();
-    	   System.out.println("Readed new distance: " + distance);
+    	   
     	   if(distance < criticalDistance) {
     		   if(led.isOff())
     			   led.powerOn();

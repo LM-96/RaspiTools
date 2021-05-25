@@ -22,6 +22,8 @@ public class FileConfigReader implements ConfigReader {
 	private static final String LED_PIN_KEY = "LED_PIN";
 	private static final String TRIG_PIN_KEY = "TRIG_PIN";
 	private static final String ECHO_PIN_KEY = "ECHO_PIN";
+	private static final String SONAR_ALONE_KEY = "SONARALONE";
+	private static final String LED_ALONE_KEY = "LEDALONE";
 	
 	private Path file;
 	private Map<String, String> configs;
@@ -36,6 +38,7 @@ public class FileConfigReader implements ConfigReader {
 			return false;
 		
 		configs = Files.lines(file)
+				.filter(l -> !l.startsWith("//"))
 				.map(l -> l.split(":"))
 				.collect(Collectors.toMap(l -> l[0].trim(), l -> l[1].trim()));
 		
@@ -80,6 +83,22 @@ public class FileConfigReader implements ConfigReader {
 			return Long.parseLong(configs.get(DELAY_MILLIS_KEY));
 		
 		return ConfigReader.super.getDelayMillis();
+	}
+	
+	@Override
+	public String getLedAlone() {
+		if(configs.containsKey(LED_ALONE_KEY))
+			return configs.get(LED_ALONE_KEY);
+		
+		return ConfigReader.super.getLedAlone();
+	}
+	
+	@Override
+	public String getSonarAlone() {
+		if(configs.containsKey(SONAR_ALONE_KEY))
+			return configs.get(SONAR_ALONE_KEY);
+		
+		return ConfigReader.super.getSonarAlone();
 	}
 
 }

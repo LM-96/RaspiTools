@@ -1,15 +1,18 @@
 package it.lm96.raspitools.led;
 
+import java.io.IOException;
+
 import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.Pin;
 
-public class Pi4JLed implements PiLed {
+public class Pi4JLed extends PiLed {
 	
 	private GpioPinDigitalOutput pinOut;
 	
 	public Pi4JLed(GpioController controller, Pin pin) {	
 		pinOut = controller.provisionDigitalOutputPin(pin);
+		originalOn = isOn();
 	}
 
 	@Override
@@ -30,6 +33,11 @@ public class Pi4JLed implements PiLed {
 	@Override
 	public boolean isOff() {
 		return pinOut.isLow();
+	}
+
+	@Override
+	public void close() throws IOException {
+		
 	}
 
 }
